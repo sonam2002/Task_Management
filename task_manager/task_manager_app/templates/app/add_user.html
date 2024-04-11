@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <style>
+        div{
+            border: 3px solid rgb(62, 199, 202);
+            width: 500px;
+            height: 300px;
+            margin-top: 40px;
+        }
+        input{
+         height: 20px;
+         font-size: 18px;
+        }
+        button{
+            width: 25%;
+            height: 30px;
+            margin-top: 8px;
+            font-size: 15px;
+            background-color: rgb(122, 227, 225);
+            border-color: rgb(122, 227, 225) ;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div>
+            <h1>Add User</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Add User</button>
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
